@@ -83,7 +83,7 @@ namespace SignalRCluster.Internal
                         {                            
                             remoteOperations.Add(new RemoteDirectoryOperation(_membershipProvider.GetOwnUniqueId(), Sequence, action));
 
-                            this.Sequence = this.Sequence == Int32.MaxValue ? 0 : this.Sequence + 1;
+                            this.Sequence = this.Sequence == int.MaxValue ? 0 : this.Sequence + 1;
 
                             _actionHistory.Add(action);
                         }

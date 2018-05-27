@@ -42,7 +42,7 @@ namespace SignalRCluster.Internal
 
                             hubDirectory.PerformAction(remoteAction);
 
-                            _sequences[node] = currentSequence + 1;
+                            _sequences[node] = currentSequence==int.MaxValue ? 0: currentSequence + 1;
 
                         }
                         else if(remoteAction.Sequence > currentSequence)
